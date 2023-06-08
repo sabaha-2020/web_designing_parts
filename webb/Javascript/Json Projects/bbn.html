@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApiTest</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <style>
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+  letter-spacing: 0.3px;
+}
+
+.nav-item a{
+  color: aliceblue;
+}
+
+
+#cards{display: flex;
+    padding: 100px;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 20px;
+    overflow: hidden;
+    text-align: center;
+    background-color: black;
+  } 
+
+  #cards2{display: flex;
+    padding: 100px;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 20px;
+    overflow: hidden;
+    text-align: center;
+    background-color: black;
+  } 
+.card{
+    width: 18rem;
+}
+.img-drink{
+   height: 220px;
+   width: 300px;
+   border-radius: 50%;
+}
+.sec2{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(67, 81, 81);
+  overflow: scroll;
+  height: 400px;
+  margin: 90px;
+
+  
+}
+
+table{
+  margin-top: 10px;
+  width: 90%;
+}
+table, th, td  {
+  font: 18px Calibri;
+  border: solid 1px rgb(254, 255, 253);
+  border-collapse: collapse;
+  
+  padding: 3px 3px;
+  text-align: center;
+  margin: 10px;
+  color: aliceblue;
+}
+th {
+  font-weight:bold;
+  padding: 8px;;
+}
+
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+
+
+    </style> 
+</head>
+
+<body>
+
+
+
+  <nav class="navbar navbar-expand-lg py-3 sticky-top navbar-light bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">ApiTest
+        <img class="logo" src="lion.png" height="30px" width="30px">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="dog()" href="#">Dog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="users()" href="#Tabl">Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Disney</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ondblclick="drink()" href="#cards2">Drinks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Navbar -->
+  
+
+
+  <!-- ........................dog.................... -->
+  <h2 class="text-center mt-5 bg-primary p-3">Dog List</h2>
+   
+         <div id="cards">
+    
+        <img class="card-img-top" src="..." >
+       
+          <p class="card-text"></p>
+  
+        </div>
+      
+
+
+<!-- ........................user.................... -->
+        
+        
+        
+        <h2 class="text-center mt-5 p-3">Users List</h2>
+<div  id="Tabl" class="sec2 mt-5">
+  <table class="table-striped"  id="stockTable"  border="2">
+    <tr>
+    <th>ID</th>
+    <th >Image</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Email</th>
+    <th>Phone</th>
+    </tr>   
+    </table>
+    </div>  
+</div>
+
+
+<!-- ........................drink.................... -->
+
+
+<h2 class="text-center mt-5 p-3">Drinks</h2>
+
+<div id="cards2">
+    
+  <img class="card-img-top" src="..." >
+ 
+    <p class="card-text"></p>
+
+    <p><button>Read More</button></p>
+  </div>
+
+<!-- ........................disney.................... -->
+
+<script>
+
+    function dog(){
+    const xmlhttp = new XMLHttpRequest();
+      xmlhttp.onload = function() 
+                       {
+
+                    const myObj = JSON.parse(this.responseText);
+
+                        let text = "";
+
+         for (let i = 0; i < myObj.length; i++) 
+                    {
+                       
+        
+                   text +="<div class="+"card>"+"<div class="+"new>"+
+                     "<img class="+"card-img-top" +
+                     " src="+ myObj[i].image.url +
+                     " height=200px width=200px>"+
+                     "<p>"+myObj[i].name+
+                      "<br>"+myObj[i].bred_for+
+                      "<br>"+myObj[i].life_span+
+                      "<br>"+myObj[i].breed_group+
+                      "</p>"+
+                      "</div>"+
+                      "</div>";
+                     
+
+                 document.getElementById("cards").innerHTML = text;
+                    }
+                }
+
+ xmlhttp.open("GET", "https://api.thedogapi.com/v1/breeds?limit=10&page=0");
+ xmlhttp.send();
+              }
+
+
+function users(){
+  var tablelist = document.getElementById("stockTable");
+  const xmlhttp = new XMLHttpRequest();
+  xmlhttp.onload = function() {
+  const myObj = JSON.parse(this.responseText);
+    for(var i=0;i<myObj.users.length;i++)
+       {
+
+  var rowCount = tablelist.rows.length;
+  var row = tablelist.insertRow(rowCount);
+  row.classList.add("tblstyle1");  
+
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
+  var cell6 = row.insertCell(5);
+
+  cell1.innerHTML = myObj.users[i].id;
+  cell2.innerHTML = "<td><img src='"+myObj.users[i].image +"' height=50 width=50 style='border-radius: 50%;'></td>";
+  cell3.innerHTML = myObj.users[i].firstName +" " + myObj.users[i].maidenName +" " + myObj.users[i].lastName;
+  cell4.innerHTML = myObj.users[i].age;
+  cell5.innerHTML = myObj.users[i].email;
+  cell6.innerHTML = myObj.users[i].phone;
+  
+
+       }
+     
+};
+xmlhttp.open("GET", "https://dummyjson.com/users");
+xmlhttp.send();   
+}
+
+
+function drink(){
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() 
+                 {
+
+              const myObj = JSON.parse(this.responseText);
+
+                  let text = "";
+
+   for (let i = 0; i < myObj.drinks.length; i++) 
+              {
+                 
+  
+             text +="<div class="+"card>"+"<div class="+"new>"+
+               "<img class="+"card-img-top"+"img-drink"+
+               " src="+myObj.drinks[i].strDrinkThumb+
+               " height=220px width=100%>"+
+               "<p>"+myObj.drinks[i].idDrink+
+                "<br>"+myObj.drinks[i].strDrink+
+                "<br>"+myObj.drinks[i].strCategory+
+                "<br>"+myObj.drinks[i].strIBA+
+                "<br>"+myObj.drinks[i].strAlcoholic+
+                "</p>"+
+                "</div>"+
+                "</div>";
+               
+
+           document.getElementById("cards2").innerHTML = text;
+              }
+          }
+
+xmlhttp.open("GET", "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita");
+xmlhttp.send();
+        }
+
+
+
+
+
+
+</script>
+</body>
+</html>

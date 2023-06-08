@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projuct</title>
+</head>
+<body>
+    <h1>ABC Super Market</h1>
+    <button onclick="showProduct()">View More</button>
+    <button onclick="getName()">Get Name</button>
+    
+<script>
+    var firmname = "Fullstack Academy";
+     
+    function showProduct(){
+
+        sessionStorage.setItem("frmname", firmname);
+
+        window.open('Two.html');       
+        
+    }
+    function getName(){      
+
+        alert(firmname);
+    }
+   
+</script>
+    
+
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .selection{
+        width: 155px;
+        padding: 2.5px;
+    }
+    .sec{
+        width: 180px;
+        
+    }
+    .container1{
+        width: 100%;
+        padding: 20px;
+        border: 2px solid rgb(15, 15, 15);
+    }
+    .Right{   
+        float: right;
+        padding: 45px 30px;       
+        
+    
+    }
+    .head{
+        top: 0px;
+        
+    }
+    .CX-Name{
+        width: 30%;  
+        height: 35px;     
+        margin: 2px;
+        align-items: center;
+        outline: none;
+        border-radius: 5px;
+        }       
+         
+      
+        .frm{
+            width: 100%;
+            height: auto;
+            align-items: center;
+            justify-items: center;
+            
+        }
+           
+        .number{
+          text-align: center;
+          padding: 2px;
+          margin: 3px;
+          color: black;
+          background-color: aliceblue;
+          outline: none;
+          border-radius: 10px;
+          
+          
+        }
+        .sub-head{
+          text-align: center;
+          border: 2px solid rgb(199, 33, 33);
+        }
+        .sum{
+          gap: 30px ;
+          /* padding: 10px; */
+          margin: 5px;
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          text-align:left;
+          border: 2px solid black;
+        }
+        .btn-se{
+          float: inline-end;
+         
+        }
+        .sum-box{
+          height: 40px;
+          border: 2px solid black;
+          border-radius: 10px;
+          background-color:  antiquewhite;
+          text-align: end;
+          color: black;
+          font-weight: 300px;
+          padding: 10px;
+        }
+  </style>
+</head>
+<body>
+    <div>
+    <div class="row  mt-3 p-3 bg-primary text-white rounded border">
+        <div class="col">
+        <h1>Dhyanus Supermarket</h1>
+        <h6>Gokulam Complex<br>Perambra Town<br>Near RTO Office<br>Perambra PO</h6>
+        <h6>GST No:65327561875</h6></div>
+        <h6 class=" col Right text-end"> Date : 12-10-2022<br>Invoice No : 652476 </h6>
+        <div> <label>Customer Name</label>
+            <input type="text" class="CX-Name col"placeholder="Customer Name/Card Number"><br>
+            <label> Mobile Number </label>
+            <input type="text" class="CX-Name col" placeholder="Mobile Number"><br>
+        </div>
+          </div>
+          </div>
+        
+        <div class="container1">
+            <form name="frm" class="frm">               
+                <div class="row" >
+                    <div class="col-sm bg-dark text-white sub-head" style="height: 250px;"><label>Sr No</label><br>
+                         <input type="number" class="number"  value="1" style="width: 50%;" disabled><br>
+                         <input type="number" class="number" value="2" style="width: 50%;" disabled><br>
+                         <input type="number" class="number" value="3" style="width: 50%;" disabled><br>
+                         <input type="number" class="number" value="4" style="width: 50%;" disabled><br>
+                         <input type="number" class="number" value="5" style="width: 50%;" disabled>
+                         </div>
+                    <div class="col-sm-4 bg-dark text-white sec sub-head"><label>Particuler</label><br>
+                        <select class="selection number" style="padding: 4px;"> </div>
+                            <option>------</option>             
+                            <option id="Mgo">Mango</option>
+                            <option id="Orge">Orange</option>
+                            <option id="Aple">Apple</option>
+                            <option id="Pine">Pineapple</option>
+                            <option id="Waml">Watermelon</option>
+                          </select>
+                          <select class="selection number" style="padding: 4px;"> </div>
+                            <option>------</option>             
+                            <option id="Mgo">Mango</option>
+                            <option id="Orge">Orange</option>
+                            <option id="Aple">Apple</option>
+                            <option id="Pine">Pineapple</option>
+                            <option id="Waml">Watermelon</option>
+                          </select>
+                          <select class="selection number" style="padding: 4px;"> </div>
+                            <option>------</option>             
+                            <option id="Mgo">Mango</option>
+                            <option id="Orge">Orange</option>
+                            <option id="Aple">Apple</option>
+                            <option id="Pine">Pineapple</option>
+                            <option>Watermelon</option>
+                          </select>
+                          <select class="selection number" style="padding: 4px;"> </div>
+                            <option>------</option>             
+                            <option id="Mgo">Mango</option>
+                            <option id="Orge">Orange</option>
+                            <option id="Aple">Apple</option>
+                            <option id="Pine">Pineapple</option>
+                            <option id="Waml">Watermelon</option>
+                          </select>
+                          <select class="selection number" style="padding: 4px;"> </div>
+                            <option >------</option>             
+                            <option id="Mgo">Mango</option>
+                            <option id="Orge">Orange</option>
+                            <option id="Aple">Apple</option>
+                            <option id="Pine">Pineapple</option>
+                            <option id="Waml">Watermelon</option>
+                          </select>
+                    </div>
+                    <div class="col-sm bg-dark text-white sub-head"><label>Code</label><br>
+                        <input type="text" class="number" value="" style="width: 80px;"><br>
+                         <input type="text" class="number" value="" style="width: 80px;"><br>
+                         <input type="text" class="number" value="" style="width: 80px;"><br>
+                         <input type="text" class="number" value="" style="width: 80px;"><br>
+                         <input type="text" class="number" value="" style="width: 80px;">
+                    </div>
+                        <div class="col-sm bg-dark text-white sub-head">Catogery
+                        <select class="selection number" style="padding: 4px;"> </div>
+                            <option id="Veg">Vegitables</option>             
+                            <option id="frt">Fruit</option>                    
+                          </select>
+                          <select class="selection number" style="padding: 4px;"> </div>
+                            <option id="Veg">Vegitables</option>             
+                            <option id="frt">Fruit</option>                    
+                          </select>
+                          <select class="selection number"style="padding: 4px;"> </div>
+                            <option id="Veg">Vegitables</option>             
+                            <option id="frt">Fruit</option>                    
+                          </select>
+                          <select class="selection number" style="padding: 4px;"> </div>
+                            <option id="Veg">Vegitables</option>             
+                            <option id="frt">Fruit</option>                    
+                          </select>
+                          <select class="selection number" style="padding: 4px;"> </div>
+                            <option id="Veg">Vegitables</option>             
+                            <option id="frt">Fruit</option>                    
+                          </select>
+                    </div>
+                    
+                    <div class="col-sm bg-dark text-white sub-head">Quantity
+                        <input type="number" class="number" value="" id="qnty1" style="width: 90px;" onchange="getSum()"><br>
+                         <input type="number" class="number" value="" id="qnty2" style="width: 90px;" onchange="getSum()"><br>
+                         <input type="number" class="number" value="" id="qnty3" style="width: 90px;" onchange="getSum()"><br>
+                         <input type="number" class="number" value="" id="qnty4" style="width: 90px;" onchange="getSum()"><br>
+                         <input type="number" class="number" value="" id="qnty5" style="width: 90px;" onchange="getSum()">
+                    </div>
+                    <div class="col-sm bg-dark text-white sub-head"><label>Rate</label><br>
+                        <input type="number" class="number" value="200" id="rate1" style="width: 90px;"><br>
+                         <input type="number" class="number" value="80" id="rate2" style="width: 90px;"><br>
+                         <input type="number" class="number" value="180" id="rate3" style="width: 90px;"><br>
+                         <input type="number" class="number" value="70" id="rate4" style="width: 90px;"><br>
+                         <input type="number" class="number" value="110" id="rate5" style="width: 90px;">
+                    </div>
+                    <div class="col-sm bg-dark text-white sub-head"><label>Price</label><br>
+                        <input type="number" class="number" value="" id="price1" style="width: 90px;"><br>
+                         <input type="number" class="number" value="" id="price2" style="width: 90px;"><br>
+                         <input type="number" class="number" value="" id="price3" style="width: 90px;"><br>
+                         <input type="number" class="number" value="" id="price4" style="width: 90px;"><br>
+                         <input type="number" class="number" value="" id="price5" style="width: 90px;">
+                    </div>
+                    <div class="col-sm bg-dark text-white sub-head"><label>Remark</label><br>
+                        <input type="text" class="number" value="" style="width: 100px;"><br>
+                         <input type="text" class="number" value="" style="width: 100px;"><br>
+                         <input type="text" class="number" value="" style="width: 100px;"><br>
+                         <input type="text" class="number" value="" style="width: 100px;"><br>
+                         <input type="text" class="number" value="" style="width: 100px;">
+                    </div>
+                    <div class="sum">
+                    <label>Total Amount</label><input type="number" class="sum-box" id="total" value="" style="width: 180px;" disabled onchange="getSum()"><br>
+                    <label>Discount</label><input type="text" class="sum-box" id="disc" value="" style="width: 180px;" disabled onchange="getDiscount()"><br>                     
+                    <label>Payble Amount</label><input type="text" class="sum-box" id="netAmt" value="" style="width: 180px;" disabled onchange="getPay()">
+                  </div>
+                  </div>
+            </form>
+            <div class="btn-se">
+            <button style="width: 180px;" class="btn btn-dark " onclick="getDiscount()" ondblclick="getPay()">Print</button>
+          </div>
+        </div>
+    </div>
+    <script>
+
+
+
+
+
+
+//   var qnty1,qnty2,qnty3,qnty4,qnty5;
+//   var rate1,rate2,rate3,rate4,rate5;
+//   var price1,price2,price3,price4,price5;
+//   var total;
+//   var disc;
+//   var pay;
+  
+  
+  
+//   function getSum(){
+//     qnty1 = parseFloat(document.frm.qnty1.value);
+//     rate1 = 200;
+//     price1 = qnty1 * rate1;
+//     document.frm.price1.value = price1;
+//     // alert("price1= " +price1);
+//     qnty2 = parseFloat(document.frm.qnty2.value);
+//     rate2 = 80;
+//     price2 = qnty2 * rate2;
+//     document.frm.price2.value = price2;
+
+//     qnty3 = parseFloat(document.frm.qnty3.value);
+//     rate3 = 180;
+//     price3 = qnty3 * rate3;
+//     document.frm.price3.value = price3;
+
+//     qnty4 = parseFloat(document.frm.qnty4.value);
+//     rate4 = 70;
+//     price4 = qnty4 * rate4;
+//     document.frm.price4.value = price4;
+
+//     qnty5 = parseFloat(document.frm.qnty5.value);
+//     rate5 = 110;
+//     price5 = qnty5 * rate5;
+//     document.frm.price5.value = price5;  
+    
+//     total = price1 + price2 + price3 + price4 + price5;
+//     document.frm.total.value = total; 
+      
+
+    
+   
+//   }
+//     function getDiscount(){
+//     // var disc;
+//     // alert("total= " +total);
+
+//      if ((total>=1000) && (total< 2000))
+
+//     {
+//       disc = (total * 5 )/ 100;
+//       // alert(disc +"disc")
+//     }
+//     else if ((total >=2000) && (total< 5000))
+//     { 
+//     disc = (total * 8) / 100;
+//     }
+//     else ( total >= 5000)
+//     {
+//       disc = (total * 15) / 100;
+//     }
+//     document.frm.disc.value = disc; 
+//   }
+//   function getPay(){
+   
+//     pay = total - disc;
+//     // alert("total= " +total);
+//     document.frm.netAmt.value = pay;
+//   }
+  
+ 
+    </script>
+</body>
+</html>

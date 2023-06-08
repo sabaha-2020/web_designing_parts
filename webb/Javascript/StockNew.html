@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhyanuz</title>
+    <link rel="stylesheet" href="javacss.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .table{
+            padding: 0;
+            margin:0;
+        }
+        .table-1{
+           background-color: bisque;
+           padding: 10 px;
+           margin: 5px;
+        }
+        .table-2{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <div class="table row bg-primary text-white rounded border" >
+        <div class=" col "><h1>Dhyanuz Fruit</h1>
+            <h4>Jubilee Complex <br> Perambra (po)<br> Kozhikode <br> 673525</h4>
+            <h4>GST NO:65321576</h4></div>
+       
+<!--      -->
+        
+        <div class="col Right"> Mob No : 0123456789<br>
+            Date : 14-11-1990 <br>
+            Bill No : DFR1345<br></div>
+      </div>
+    </div>
+    <div class="">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Sr No</th>
+                <th>Code</th>
+                <th>Particuler</th>                
+                <th>Catogery</th>
+                <th>Quantity</th>
+                <th>MRP</th>
+                <!-- <th>Amount</th> -->
+                
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><input type="text" id="code" name="code" placeholder="" style="padding: 3px;"></td>
+                <td><input type="text" id="perti" name="Particuler Name" placeholder="" style="padding: 3px;"></td>
+                <td><input type="text" id="ctgry" name="category" placeholder="" style="padding: 3px;"></td>
+                <td><input type="text" id="qunty" name="Quantity" placeholder="" style="padding: 3px;"></td>
+                <td><input type="text" id="mrp" name="Mrp" placeholder="" style="padding: 3px;"></td>
+                <!-- <td><input type="text" id="amt" name="Amount" placeholder=""></td> -->
+                <td><button type="button" id="stock" class="btn btn-dark">+</button></td>
+              </tr>           
+               
+            </tbody>
+          </table>
+    </div>
+
+    <div class="table-2">
+        <table id="display" class="table table-bordered">
+            <thead>
+              <tr>
+                
+                <th>Code</th>
+                <th>Particuler</th>                
+                <th>Catogery</th>
+                <th>Quantity</th>
+                <th>MRP</th>
+                
+                
+                
+              </tr>
+            </thead>
+            </table> 
+    </div>
+   
+
+
+        <script>
+
+var stock = document.getElementById("stock");
+    stock.addEventListener("click",displayStock);
+
+    var row = 1;
+          
+
+        function displayStock(){
+          var code = document.getElementById("code").value;
+          var prdct = document.getElementById("perti").value;
+          var cat = document.getElementById("ctgry").value;
+          var qnty = document.getElementById("qunty").value;
+          var mrp = document.getElementById("mrp").value;
+          
+
+          if(!code || !prdct || !cat || !qnty || !mrp) {
+            
+            alert("please fill all the boxes");
+            return;
+        }
+        var display = document.getElementById("display");
+        
+        var newRow = display.insertRow(row);
+
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        var cell4 = newRow.insertCell(3);
+        var cell5 = newRow.insertCell(4);
+
+        cell1.innerHTML = code;
+        cell2.innerHTML = prdct;
+        cell3.innerHTML = cat;
+        cell4.innerHTML = qnty;
+        cell5.innerHTML = mrp;
+
+        }
+
+        </script>
+    
+</body>
+</html>

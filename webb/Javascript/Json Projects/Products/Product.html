@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+          body{
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+  letter-spacing: 0.3px;
+}
+.nav{
+  position: fixed;
+}
+
+.nav-item a{
+  color: aliceblue;
+}
+
+
+#cards{display: flex;
+    padding: 100px;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 20px;
+    overflow: hidden;
+    text-align: center;
+    background-color: black;
+  } 
+
+  #cards2{display: flex;
+    padding: 100px;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 20px;
+    overflow: hidden;
+    text-align: center;
+    background-color: black;
+  } 
+.card{
+    width: 20rem;
+    height: 550px;
+}
+.img-drink{
+   height: 220px;
+   width: 300px;
+   border-radius: 50%;
+}
+.sec2{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(67, 81, 81);
+  overflow: scroll;
+  height: 400px;
+  margin: 90px;
+
+  
+}
+
+table{
+  margin-top: 10px;
+  width: 90%;
+}
+table, th, td  {
+  font: 18px Calibri;
+  border: solid 1px rgb(254, 255, 253);
+  border-collapse: collapse;
+  
+  padding: 3px 3px;
+  text-align: center;
+  margin: 10px;
+  color: aliceblue;
+}
+th {
+  font-weight:bold;
+  padding: 8px;;
+}
+
+
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 5px;
+  color: white;
+  background-color: rgb(10, 10, 216);
+  text-align: center;
+  cursor: pointer;
+  width: 90%;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+    </style>
+    
+
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Api</a>
+          <a class="navbar-brand" href="#">
+            <img src="" style="width:40px;" class="rounded-pill"> 
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="dog()" href="#">Dogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="users()" href="#Tabl">Users</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Disney</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="drink()" href="#cards2">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <h2 class="text-center mt-5 p-3 bg-danger">Drinks</h2>
+
+<div id="cards2">
+    
+  <img class="card-img-top" src="..." >
+ 
+    <p class="card-text"></p>
+
+    <p><button>Read More</button></p>
+  </div>
+
+
+
+
+<script>
+    
+    function drink(){
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() 
+                 {
+              const myObj = JSON.parse(this.responseText);
+                  let text = "";
+   for (let i = 0; i < myObj.products.length; i++) 
+              {                 
+  
+             text +="<div class="+"card>"+"<div class="+"new>"+
+               "<img class="+"card-img-top"+"img-drink"+
+               " src="+myObj.products[i].thumbnail+
+               " height=320px width=100%>"+
+               "<p>"+myObj.products[i].id+
+                "<br>"+myObj.products[i].title+
+                "<br>"+myObj.products[i].category+
+                "<br>"+myObj.products[i].description+"<button class=btn btn-primary onclick='getDetails("+myObj.products[i].id+")''>"+"Get More"+"</button>"+
+                "</p>"+
+                "</div>"+
+                "</div>";
+
+                // sessionStorage.setItem("text", myObj[0]);
+
+                // sessionStorage.setItem("second", JSON.stringify(myObj));  
+                
+
+           document.getElementById("cards2").innerHTML = text;
+              }
+              
+          }
+        
+
+
+xmlhttp.open("GET", "https://dummyjson.com/products");
+xmlhttp.send();
+        }
+        function getDetails(c){     
+              
+            sessionStorage.setItem("second", JSON.stringify(c)); 
+
+                window.open('Product2.html');
+                // location.href = "Product2.html";
+              }
+
+</script>
+    
+</body>
+</html>

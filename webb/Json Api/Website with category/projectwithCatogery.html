@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0px;
+            box-sizing:border-box;
+        }
+        .hmimg{
+            width: 100%;
+            height: 100vh;
+          
+        }
+        .navbar1{
+            width: 100%;
+           background-color: transparent;
+           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+           /* background-color: azure; */
+           z-index: 1000;
+           
+           
+        }
+        .name{       
+       position: absolute;
+       left:970px;
+       margin-top: 250px;
+       width: 70%;
+       font-size: 85px;
+       color: rgb(17, 4, 4);
+       z-index: 100;
+       text-shadow: 2px 2px 5px  rgb(224, 71, 15);
+        }
+        .about {
+        position: relative;
+       left:130px;           
+       font-size: 18px;
+       margin-top: 50px;
+       margin-bottom: 20px;
+     }
+     .us{
+        position: relative;
+        margin-top: 70px;
+        text-decoration: underline red;
+        left:130px;   
+     }
+     .flex1{
+        width: 29%;
+        height: 100vh;
+        
+        
+     }
+     .flex2{
+        width: 70%;
+        height: 100vh;
+     }
+     .btn1{
+        margin: 10px;
+        width: 35%;
+        padding:5px;
+        height: 40px;
+     }
+     .btn2{
+        margin:10px;
+        width:10%;
+        padding:2px;
+        background-color: rgb(244, 248, 247);
+        color: black;
+        height: 40px;   
+     }
+     .colps{
+        height: 90%;
+    }
+    .slct{
+        position: relative;
+        margin: 10px;
+        width: 40%;
+        padding: 0px;
+        border-radius: 10%;
+        height: 40px;
+        margin-left: 5px;
+    }
+    .over{
+        overflow: scroll;
+    }
+    #cards{
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    overflow: hidden;
+    text-align: center;
+    margin-left: 45px;
+    margin-right: 25px;
+    } 
+
+  #cards2{
+    display: flex;
+    padding: 80px;
+    flex-wrap: wrap;
+    column-gap: 5%;
+    row-gap: 10%;
+    text-align: center;
+    background-color: black;
+    overflow: scroll;
+    height: 80vh;
+  } 
+
+.img-drink{
+   height: 220px;
+   width: 300px;
+   border-radius: 50%;
+}
+.sec2{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(67, 81, 81);
+  overflow: scroll;
+  height: 400px;
+  margin: 90px;
+
+  
+}
+
+table{
+  margin-top: 10px;
+  width: 90%;
+}
+table, th, td  {
+  font: 18px Calibri;
+  border: solid 1px rgb(254, 255, 253);
+  border-collapse: collapse;
+  
+  padding: 3px 3px;
+  text-align: center;
+  margin: 10px;
+  color: aliceblue;
+}
+th {
+  font-weight:bold;
+  padding: 8px;;
+}
+
+
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);  
+  padding: 2px;
+  text-align: center;
+  font-family: arial;
+  width: 200px;
+  height: 120 px;
+  
+  
+}
+
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 5px;
+  color: white;
+  background-color: rgb(10, 10, 216);
+  text-align: center;
+  cursor: pointer;
+  width: 1px;
+  font-size: 5px;
+  margin-bottom: 1px;
+}
+.card_dog{
+            border: .8px solid black;
+            width:150px;
+            height: 200px;
+            display:inline-block;
+            padding:10px;
+            margin:10px;
+            text-align: center;
+            box-shadow: 5px 10px 8px 10px #888888;
+            background-color: white;
+            color: black;
+
+        }
+  .dogcard{row-gap: 3px;
+           column-gap: 10px;
+            margin:30px;
+            padding-top: 3px;
+            
+          }
+
+  .card_head{
+            height:30px;
+
+            justify-content: center;
+                  }
+ 
+ .product{ height: 350px;
+           overflow-y: scroll;
+           padding-top: 20px;
+          
+    }
+
+.container1{overflow-y: scroll;
+  
+
+  height: 500px;
+}
+  .card-text{
+    size: 3px;
+    color: black;
+    padding: 1px;
+  }
+  .ovr-h{    
+    overflow: scroll;
+    height: 90vh;
+    text-transform: capitalize;
+       
+    
+  }
+  .boxsize{
+    height: 10px;
+  }
+
+
+    </style>
+
+</head>
+<body>
+    
+       
+    <nav class=" navbar1 navbar navbar-expand-sm " style="position: fixed; width: 100%;">
+        <div class="container-fluid justify-content-start">
+            <a class="navbar-brand text-dark" href="#"><h5>API</h5></a>            
+            <img src="https://t4.ftcdn.net/jpg/05/42/57/33/360_F_542573365_KTD9Xnd1TZozteubzryoJUhN1DbxYysA.jpg" style="width:40px;" class="rounded-pill"> 
+    </div>
+    <div class="navbar navbar-expand-sm justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#Home"><h6>Home</h6></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#about"><h6>About</h6></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#Products"  onclick="products()"><h6>Products</h6></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#breed" onclick="dog()"><h6>Breeds</h6></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#"><h6>Users</h6></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#"><h6>Contact</h6></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="Home" class="row">  
+        <!-- <div class="name">
+            <h1>What is JSON?</h1>
+            <h1>What is API?</h1>
+            
+        </div>              -->
+        <img class="hmimg" src="./API-3.png">       
+     
+      <div class="container" id="about">
+        <div class="col-md-4">
+            <img class="img-responsive" style="float:left;width:500px;height:auto;" src="https://img.freepik.com/free-vector/company-employees-sharing-thoughts-ideas_74855-5469.jpg?w=826&t=st=1672734860~exp=1672735460~hmac=22f2011efbebcfb61ef17beb0d604a428027cf5f01ec82984740f6ec636eb6a8">
+        </div>
+        <div class="col-md-10 ">
+            <h3 class="us">About Us</h3>
+            <p class="about">APIs (application programming interfaces) come in many forms. API designers can choose from a range of protocols and standards when creating a new API, depending on the type of API they are creating, and its purpose. This article takes a look at a few important API types and protocols, including REST API protocols.</p> 
+            <!-- <button class="btn btn-primary col-md-2 about" href="home" style="margin-top: 30px;">Read More</button> -->
+
+            <div class="offcanvas offcanvas-start " id="demo">
+                <div class="offcanvas-header">
+                  <h1 class="offcanvas-title">Types of APIs</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="container mt-3">
+                        <h2>Web APIs</h2>
+                        <p><strong>Note:</strong> Web APIs are APIs that can be accessed using the HTTP protocol. The API defines endpoints, and valid request and response formats. Web APIs include the APIs used to communicate with the browser (see  list). They may be services such as web notifications and web storage. Different web APIs feature varying levels of security and privacy, including open, internal and partner APIs. Multiple web APIs can be combined into a composite API - a collection of data or service APIs.</p>
+                        <div id="accordion colps">
+                          <div class="card">
+                            <div class="card-header">
+                              <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                                Open APIs
+                              </a>
+                            </div>
+                            <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+                              <div class="card-body">
+                                Open APIs, also known as external or public APIs, are available to developers and other users with minimal restrictions. They may require registration, and use of an API key, or may be completely open. They are intended for external users (developers at other companies, for example) to access data or services. As an example, take a look at the  provided by the UK government. Any developer can access it, without even registering, allowing app builders to include governmental data on restaurant standards in their apps.</div>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="card-header">
+                              <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+                              Internal APIs
+                            </a>
+                            </div>
+                            <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                              <div class="card-body">
+                                In contrast to open APIs, internal APIs are designed to be hidden from external users. They are used within a company to share resources. They allow different teams or sections of a business to consume each other’s tools, data and programs. Using internal APIs has several advantages over conventional integration techniques, including security and access control, an audit trail of system access, and a standard interface for connecting multiple services.</div>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="card-header">
+                              <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+                                Partner APIs
+                              </a>
+                            </div>
+                            <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                              <div class="card-body">
+                                Partner APIs are technically similar to open APIs, but they feature restricted access, often controlled through a third-party API gateway. They are usually intended for a specific purpose, such as providing access to a paid-for service. This is a very common pattern in software as a service ecosystem.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="card-header">
+                              <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+                                Composite APIs
+                            </a>
+                            </div>
+                            <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                              <div class="card-body">
+                                Composite APIs allow developers to access several endpoints in one call. These could be different endpoints of a single API, or they could be multiple services or data sources. Composite APIs are especially useful in microservice architectures, where a user may need information from several services to perform a single task. Using composite APIs can reduce server load and improve application performance, as one call can return all the data a user needs.</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                          
+                </div>
+              </div>
+              
+              <div class="container-fluid mt-3">              
+               <button class="btn btn-primary about" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                 Read More
+                </button>
+              </div>        
+            
+        </div>
+    </div>
+    <div>
+        <div class="row" id="Products">
+          
+            <div class="col-md-10 bg-primary text-white flex1"><h1>Products</h1>
+                <div id="cat1" class="ovr-h">
+                    <ol  class="list-group list-group-numbered">
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                          <div  class="col ms-2 me-auto ">
+                            <div class="fw-bold ">Select Catogery                          
+                            </div>                            
+                          </div>
+                          <span class="badge bg-primary rounded-pill">12</span>
+                        </li>                      
+                      </ol>
+                </div>
+            
+            </div>
+                <div class="col-md-2 bg-warning text-white flex2"><h1>Products</h1>
+                    <form class="d-flex">
+                        <input class="form-control me-4 btn1" type="search" placeholder="Search Products" size="20px" >
+                        <button class="btn btn-outline-primary col-md-5 btn2" type="submit" size="10" >Search</button>
+                        <div class="d-flex justify-content-end slct">
+                          <select id="cat" onclick="search()" class="form-select d-flex" aria-label="Default select example">
+                                <option selected id="catgry"  value="">Select your category</option>
+                               
+                              </select>  
+                                                          
+                        </div>
+                      </form>                       
+
+                      <div id="cards2" class="over">
+    
+                        <img class="card-img-top" src="..." >
+                       
+                          <p class="card-text"></p></div>
+                </div>
+            </div>
+        </div>
+        <div id="breed" class="row" style="background-color:#01769f;">
+            <h1 class="col text-center text-white">Breeds</h1>   
+            <div id="cards" class="">       
+           <img class="card-img-top" src="..." >          
+             <p class="card-text"></p>
+     
+           </div>
+         
+        </div>
+    </div>
+    <div>
+        <footer class="text-center text-white" style="background-color: #caced1;">
+            <!-- Grid container -->
+            <div class="container p-4">
+              <!-- Section: Images -->
+              <section class="">
+                <div class="row">
+                  <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                      class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                      data-ripple-color="light"
+                    >
+                      <img style="width: 100px; height: 100px;"
+                        src="https://www.simplilearn.com/ice9/free_resources_article_thumb/java_api.jpg"
+                        class="w-100" 
+                      />
+                      <a href="#!">
+                        <div
+                          class="mask"
+                          style="background-color: rgba(251, 251, 251, 0.2);"
+                        ></div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                      class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                      data-ripple-color="light"
+                    >
+                      <img style="width: 100px; height: 100px;"
+                        src="data:image/png;base64,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"
+                        class="w-100"
+                      />
+                      <a href="#!">
+                        <div
+                          class="mask"
+                          style="background-color: rgba(251, 251, 251, 0.2);"
+                        ></div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                      class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                      data-ripple-color="light"
+                    >
+                      <img style="width: 100px; height: 100px;"
+                        src="https://assets.entrepreneur.com/content/3x2/2000/1649279368-Ent-2022Python.jpeg?crop=4:3"
+                        class="w-100"
+                      />
+                      <a href="#!">
+                        <div
+                          class="mask"
+                          style="background-color: rgba(251, 251, 251, 0.2);"
+                        ></div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                      class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                      data-ripple-color="light"
+                    >
+                      <img style="width: 100px; height: 100px;"
+                        src="https://railsware.com/blog/wp-content/uploads/2018/09/2400%D1%851260-rw-blog-node-js.png"
+                        class="w-100"
+                      />
+                      <a href="#!">
+                        <div
+                          class="mask"
+                          style="background-color: rgba(251, 251, 251, 0.2);"
+                        ></div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                      class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                      data-ripple-color="light"
+                    >
+                      <img style="width: 100px; height: 100px;"
+                        src="https://miro.medium.com/max/805/0*m1VOQP0FtcQufLgw.png"
+                        class="w-100"
+                      />
+                      <a href="#!">
+                        <div
+                          class="mask"
+                          style="background-color: rgba(251, 251, 251, 0.2);"
+                        ></div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                    <div
+                      class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                      data-ripple-color="light"
+                    >
+                      <img style="width: 100px; height: 100px;"
+                        src="https://www.cdmi.in/courses@2x/react-js-training-institute.jpg"
+                        class="w-100"
+                      />
+                      <a href="#!">
+                        <div
+                          class="mask"
+                          style="background-color: rgba(251, 251, 251, 0.2);"
+                        ></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- Section: Images -->
+            </div>
+            <!-- Grid container -->
+          
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+              © 2020 Copyright:
+              <a class="text-white" href="https://mdbootstrap.com/">apiTutorialOnly@maill</a>
+            </div>
+            <!-- Copyright -->
+          </footer>
+    </div>
+
+       <script>
+       
+    function products(){
+        const xmlhttp = new XMLHttpRequest();
+        xmlhttp.onload = function() 
+                         {
+                      const myObj = JSON.parse(this.responseText);
+                          let text = "";
+           for (let i = 0; i < myObj.products.length-3; i++) 
+                      {                 
+          
+                     text +="<div class="+"card>"+"<div class="+"new>"+
+                       "<img class="+"card-img-top"+"img-drink"+
+                       " src="+myObj.products[i].thumbnail+
+                       " height=110px width=180>"+
+                       "<p class=card-text>"+
+                        // myObj.products[i].id+
+                        "<br>"+myObj.products[i].title+
+                        // "<br>"+myObj.products[i].category+
+                        // "<br>"+myObj.products[i].description+"<button class=btn btn-primary onclick='getDetails("+myObj.products[i].id+")''>"+"Get More"+"</button>"+
+                        "</p>"+
+                        "</div>"+
+                        "</div>";                              
+        
+                   document.getElementById("cards2").innerHTML = text;
+                      }
+                      
+                  }
+                
+        
+        
+        xmlhttp.open("GET", "https://dummyjson.com/products");
+        xmlhttp.send();
+                }
+
+
+      // catagory.....
+            
+        const xmlhttp = new XMLHttpRequest();
+        xmlhttp.onload = function() 
+                         {
+                      const myObj = JSON.parse(this.responseText);
+                          let output = "";
+           for (let i = 0; i < myObj.length; i++) 
+                      {     
+                        
+                        // output += ;
+                        // document.getElementById("cat1").innerHTML = output;
+
+                        output += "<div id=cat1 class=>"+
+                    "<ol  class=list-group list-group-numbered>"+
+                        "<li class=list-group-item d-flex justify-content-between align-items-start>"+
+                          "<div  class=col ms-2 me-auto>"+
+                            "<div class=fw-bold boxsize>" +myObj[i]+"<br>"+                         
+                            "</div>"+                         
+                          "</div>"+
+                          "<span class=badge bg-primary rounded-pill>12</span>"+
+                        "</li>" +                     
+                      "</ol>"+
+                "</div>";
+                document.getElementById("cat1").innerHTML = output;
+
+
+                                       
+              let option = document.createElement("option");
+              option.setAttribute('value', myObj[i]);
+
+             let optionText = document.createTextNode(myObj[i]);
+               option.appendChild(optionText);
+               cat.appendChild(option);
+
+               }
+                      
+                  }
+                
+        
+        
+        xmlhttp.open("GET", "https://dummyjson.com/products/categories");
+        xmlhttp.send();
+              
+
+                function search(){
+                    var serkey= document.getElementById("cat").value;
+      var baseurl = "https://dummyjson.com/products/category/";
+      var url = baseurl + serkey;
+      
+    
+
+     const xmlhttp = new XMLHttpRequest();
+      xmlhttp.onload = function() 
+                       {
+
+                    const myObj = JSON.parse(this.responseText);
+
+                        let text = "";
+
+         for (let i = 0; i < myObj.products.length; i++) 
+                    {
+        
+                //    text +="<div class="+"card_dog>"+"<div class="+"card_head>"+ myObj.products[i].title 
+                //     +"<br>"+myObj.products[i].brand+"<br>"+myObj.products[i].category+"</div>"+"<br>"+
+                //     "<img src="+ myObj.products[i].thumbnail +" height=120 width=120>"+"</div>";
+
+                   text +="<div class="+"card>"+"<div class="+"new>"+
+                       "<img class="+"card-img-top"+"img-drink"+
+                       " src="+myObj.products[i].thumbnail+
+                       " height=110px width=180>"+
+                       "<p class=card-text>" +                       
+                        myObj.products[i].title+                        
+                        "</p>"+
+                        "</div>"+
+                        "</div>";        
+                     
+
+                 document.getElementById("cards2").innerHTML = text;
+                    }
+                }
+
+ xmlhttp.open("GET", url);
+ xmlhttp.send();
+
+            
+
+                }
+    function dog(){
+    const xmlhttp = new XMLHttpRequest();
+      xmlhttp.onload = function() 
+                       {
+
+                    const myObj = JSON.parse(this.responseText);
+
+                        let text = "";
+
+         for (let i = 0; i < myObj.length; i++) 
+                    {
+                       
+        
+                   text +="<div class="+"card>"+"<div class="+"new>"+
+                     "<img class="+"card-img-top" +
+                     " src="+ myObj[i].image.url +
+                     " height=200px width=400px>"+
+                     "<p>"+myObj[i].name+
+                    //   "<br>"+myObj[i].bred_for+
+                    //   "<br>"+myObj[i].life_span+
+                      "<br>"+myObj[i].breed_group+
+                      "</p>"+
+                      "</div>"+
+                      "</div>";
+                     
+
+                 document.getElementById("cards").innerHTML = text;
+                    }
+                }
+
+ xmlhttp.open("GET", "https://api.thedogapi.com/v1/breeds?limit=10&page=0");
+ xmlhttp.send();
+              }
+
+
+                
+            </script>
+    
+</body>
+</html>

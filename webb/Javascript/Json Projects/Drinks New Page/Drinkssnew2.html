@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinks</title>
+</head>
+<body>
+    <h1>Product</h1>
+    <button onclick="firmName()">Show</button>
+    <div>
+    <img src="" class="card" style="width: 18rem" id="imge">
+    <p id="name"></p>
+    <p id="id"></p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+</div>
+    
+    
+
+    <script>
+
+        function firmName(){     
+            var name = JSON.parse(sessionStorage.getItem("second"));
+            const xmlhttp = new XMLHttpRequest();
+          xmlhttp.onload = function() {
+
+            const two = JSON.parse(this.responseText);          
+            // var name = sessionStorage.getItem("second");
+            
+            
+            
+            alert(two)
+            let txt = "";
+             for (let x in two) {
+            txt += two[x] +"";
+            }
+
+         document.getElementById("demo").innerHTML = txt;
+        //  document.getElementById("name").innerHTML ="Name is :" +name.drinks[0].strDrink;
+        // document.getElementById("id").innerHTML =myObj.drinks[0].idDrink;        
+        // document.getElementById("imge").src = myObj.drinks[0].strDrinkThumb;
+
+
+         
+            alert(two[x])
+        }
+        xmlhttp.open("GET", "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007"+name);
+         xmlhttp.send();
+        
+} 
+
+
+
+    
+        
+    </script>
+    
+</body>
+</html>

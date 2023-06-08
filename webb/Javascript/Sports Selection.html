@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .head{
+        padding: 10px;
+        margin: 1px;
+        background-color: aquamarine;
+      }
+    </style>
+</head>
+<body>
+  
+  <div class="head" >
+    <form class="form-control"  style="background-image: linear-gradient(to right, #07aa2d,#61045f);">
+        <form class="row g-3 border " id="frm">
+          <div><h2>Registration Form</h2></div>
+            <div class="col-md-3 p-2 ">
+              <label for="" class="form-label">Name</label>
+              <input type="text" class="form-control" id="">
+            </div>
+            <div class="col-md-3 p-2">
+                <!-- <label class="form-label">Gender</label>
+                <select id="gndr" class="form-select">
+                  <option selected>Choose...</option>
+                  <option id="gndrm">Male</option>
+                  <option id="gndrf">Female</option> -->
+                </select>
+              
+                  <label for="" class="form-label"  >Gender</label>
+                  <div class="form-check"  >
+                  <input type="radio" name="gender" id="gndrm" value="0" style="width: 20px; height: 1em;">Male <br>
+                  <input type="radio" name="gender" id="gndrf" value="1"style="width: 20px;height: 1em;">Female                
+                </div>
+              </div>
+                <div class="col-md-3 p-2">
+                  <label class="form-label">Applicable</label>
+                  <select id="itms" class="form-select">
+                    <option selected>Choose...</option>
+                    <option id="">Football</option>
+                    <option id="">Vollyball</option>
+                    <option id="">Martial Arts</option>
+                  </select>
+                </div>                  
+               
+            <div class="col-md-3 p-2">
+              <label class="form-label">Age</label>
+              <input type="number" class="form-control" id="age">
+            </div>
+            <div class="col-8 p-2">
+              <label class="form-label">Height</label>
+              <input type="number" class="form-control" id="hgt" placeholder="Height in Cm">
+            </div>
+            <div class="col-8 p-2">
+              <label for="inputAddress2" class="form-label">Weight</label>
+              <input type="number" class="form-control" id="wgt" placeholder="Weight in Kg">
+              </div>
+              <div class="col-12   p-2 ">
+              <label>Status</label><input type="text" class="form-control" id="status" disabled>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something">
+                <label class="form-check-label" for="check1">Agree terms and conditions</label>
+              </div>
+              <div>
+              <button type="submit" class="btn btn-primary" style="margin: 5px;" onclick="checkEligible()">Submit</button>
+            </div>
+        </form>
+      </div>
+           
+    </form>
+<script>
+  var gndr1,gndr2,age,hgt,wgt;
+
+  function checkEligible(){
+
+gndr1 = document.getElementById("gndm").value;
+gndr2 = document.getElementById("gndf").value;
+
+for(i=0;i<10;i++){
+  if(gndr1.checked==true){
+    alert(gndr1.vale)
+  }
+}
+
+
+
+
+    
+  }
+</script>
+    
+</body>
+</html>

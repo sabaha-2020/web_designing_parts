@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinks</title>
+</head>
+<body>
+    <h1>Product</h1>
+    <button onclick="firmName()">Show</button>
+    <div>
+    <img src="" class="card" style="width: 18rem" id="imge">
+    <p id="name"></p>
+    <p id="id"></p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+</div>
+    
+    
+
+    <script>
+
+        function firmName(){
+          
+            // var name = sessionStorage.getItem("second");
+            var name = JSON.parse(sessionStorage.getItem("second"));
+            document.getElementById("name").innerHTML ="Name is :" +name.drinks[0].strDrink;
+            document.getElementById("id").innerHTML ="Id is:"+name.drinks[0].idDrink;        
+            document.getElementById("imge").src = name.drinks[0].strDrinkThumb;
+            document.getElementById("demo").innerHTML ="Tags is:" +name.drinks[0].strTags;
+            document.getElementById("demo1").innerHTML ="Category is :"+name.drinks[0].strCategory;        
+            document.getElementById("demo2").innerHTML ="IBA is :"+name.drinks[0].strIBA;
+
+            
+            
+            alert(name)
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body onload="firmName()">
+    <h1>Product Details</h1>
+    <!-- <button onclick="firmName()">Show</button> -->
+
+    <div>
+    
+    <p id="demo"></p>
+    
+</div>
+    
+    
+
+    <script>
+
+        function firmName(){     
+            var name = JSON.parse(sessionStorage.getItem("second"));
+            const xmlhttp = new XMLHttpRequest();
+          xmlhttp.onload = function() {
+
+            const two = JSON.parse(this.responseText);          
+            // var name = sessionStorage.getItem("second");
+            
+            
+            
+            // alert(two.id)
+            let txt = "";
+             for (let x in two) {
+            txt += two[x] +"";
+            // txt += "<div class="+"smart>"+"<img src="+two.products[x].thumbnail+"height=150 width=150>"+"</div>";
+            }
+
+            
+
+               document.getElementById("demo").innerHTML = txt;       
+
+        //   document.getElementById("imge").src = name.products[x].thumbnail;
+        //  document.getElementById("name").innerHTML ="Name is :" +name.drinks[0].strDrink;
+        // document.getElementById("id").innerHTML =myObj.drinks[0].idDrink;        
+        // document.getElementById("imge").src = myObj.drinks[0].strDrinkThumb;
+
+
+         
+            alert(two[x])
+        }
+        xmlhttp.open("GET", "https://dummyjson.com/products/"+name);
+         xmlhttp.send();
+        
+} 
+
+
+
+    
+        
+    </script>
+    
+</body>
+</html>

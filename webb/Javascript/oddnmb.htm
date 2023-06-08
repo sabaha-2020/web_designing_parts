@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>odd-even</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+<body>
+    
+   <div class="text-center border border-primary bg-success p-3 text-dark bg-opacity-25 mx-auto mt-5" style="width: 500px;">
+   <h1> ODD OR EVEN </h1>
+
+   <label>Enter Number</label> <br/>
+   <input type="number" id="oddeven" onkeyup="isCheck()"> <br><span id="show"></span>
+</div>
+<script>
+
+   function isCheck(){
+      
+    var num = document.getElementById('oddeven').value;
+
+    if ((num % 2)===0){
+          document.getElementById('show').innerHTML = "number " +num+ " is  an even number";
+          
+    }
+   
+   else {
+      document.getElementById('show').innerHTML = "number " +num+ " is  an odd number";
+
+   }
+
+}
+
+
+</script>
+
+
+</body>
+</html>

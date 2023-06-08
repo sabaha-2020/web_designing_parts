@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiTable</title>
+</head>
+<body>
+    <form name="frm">
+        <label>Please enter a number</label> <input type="number" class="number" value="" id="digit" style="width: 190px;" onchange="getTable()"><br><br>
+        <label>Please enter a number</label> <input type="number" class="number" value="" id="limit" style="width: 190px;" onchange="getTable()"><br>
+     </form>
+        <script>
+          function getTable(){
+             
+             var temp;
+             var multi;
+            multi = parseFloat(document.frm.digit.value);
+            var lmt;
+            imt = parseFloat(document.frm.limit.value);
+             var tab;
+             for(var i=multi;i<=imt;i++){
+                {
+                    
+                        
+                    for( var j = 1 ; j <=10; j++){
+                      
+
+                        tab = j * i + "<br>";
+
+                 document.write( j+ " x " + i + " = " +tab + "<br>");
+
+                        }
+                    }
+                }
+
+               
+             }
+     
+          
+     
+     
+         
+     
+        </script>
+</body>
+</html>

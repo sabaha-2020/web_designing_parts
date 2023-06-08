@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1{border:.8px solid black;
+           height: 200px;
+            width: 200px;
+            justify-content: space-evenly; 
+            column-gap: 10px; 
+             
+             margin-left: 30px;
+            padding-left: 50px;
+            display:inline-table;
+            box-shadow: 5px 10px 8px 10px #1b1b1b;
+}
+.cont{background-color: rgb(136, 131, 185);
+     margin: 20px; 
+} 
+
+ body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+    </style>
+</head>
+<body>
+
+    <button onclick="stringmethod()">try it</button>
+    
+   <div class="cont">
+    <div class="container p-5 my-5 bg-light text-dark container1">
+        <h5>String Length</h5>
+        <p style="text-align:left" id="demo"></p>
+    </div>
+
+    <div class="container p-5 my-5 bg-light text-dark container1">
+        <h5>Slice Method</h5>
+        <p style="text-align:left"  id="demo1"></p>
+    </div>
+     
+    <div class="container p-5 my-5 bg-light text-dark container1">
+        <h5>Substring Method</h5>
+        <p style="text-align:left" id="demo2"></p>
+    </div>
+     
+    <div class="container p-5 my-5 bg-light text-dark container1">
+        <h5>Substr Method</h5>
+        <p style="text-align:left" id="demo3"></p>
+    </div>
+     
+    <div class="container p-5 my-5 bg-light text-dark container1">
+        <h5>Replace Method</h5>
+        <p style="text-align:left" id="demo4"></p>
+    </div>
+     
+    <div class="container p-5 my-5 bg-light text-dark container1">
+        <h5>ReplaceAll Method</h5>
+        <p style="text-align:left" id="demo5"></p>
+
+    </div>
+
+    <div class="container p-5 my-5 bg-light text-dark container1">
+        <h5>To Uppercase Method</h5>
+        <p style="text-align:left" id="demo6"></p>
+
+    </div>
+    <div class="container p-5 my-5 bg-light text-dark container1">
+        <h5>To Lowercase Method</h5>
+        <p style="text-align:left"  id="demo7"></p>
+
+    </div>
+    <div class="container p-5 my-5 bg-light text-dark container1">
+        <h5>Concat Method</h5>
+        <p style="text-align:left" id="demo8"></p>
+
+    </div>
+    <div class="container p-5 my-5 bg-light text-dark container1">
+        <h5>Trim Method</h5>
+        <p style="text-align:left" id="demo9"></p>
+
+    </div>
+    <div class="container p-5 my-5 bg-light text-dark container1">
+        <h5>PadStart Method</h5>
+        <p style="text-align:left" id="demo10"></p>
+
+    </div>
+    <div class="container p-5 my-5 bg-light text-dark container1">
+        <h5>PadEnd Method</h5>
+        <p style="text-align:left" id="demo11"></p>
+
+    </div>
+    <div class="container p-5 my-5 bg-light text-dark container1">
+        <h5>CharAt Method</h5>
+        <p style="text-align:left" id="demo12"></p>
+    </div>
+    <div class="container p-5 my-5 bg-light text-dark container1">
+        <h5>CharCodeAt Method</h5>
+        <p style="text-align:left" id="demo13"></p>
+    </div>
+
+    <div class="container p-5 my-5 bg-light text-dark container1">
+        <h5>StringSplit Method</h5>
+        <p style="text-align:left" id="demo14"></p>
+    </div>
+    </div>  
+
+    
+    <script>
+        function stringmethod()
+{
+let text = "Hello World!";
+
+document.getElementById("demo").innerHTML = "Text.Length="+text.length;
+
+let slice = text.slice(6,10);
+document.getElementById("demo1").innerHTML = " Text.Slice(6,10)="+slice;
+
+document.getElementById("demo2").innerHTML = "Text.Substring(4,9)"+text.substring(4,9);
+
+document.getElementById("demo3").innerHTML = "Text.Substr(3,6)"+text.substr(3,6);
+
+document.getElementById("demo4").innerHTML = text.replace("World","India");
+
+let test = "I love cats. Cats are very easy to love. Cats are very popular."
+output = test.replaceAll("Cats","Dogs");
+output = test.replaceAll("cats","dogs");
+document.getElementById("demo5").innerHTML = output;
+
+document.getElementById("demo6").innerHTML ="text.toUpperCase()="+text.toUpperCase();
+
+document.getElementById("demo7").innerHTML ="text.toLowerCase()="+text.toLowerCase();
+
+let text1 = "Hello";
+let text2 = "World!";
+let text3 = text1.concat(" ",text2);
+document.getElementById("demo8").innerHTML =text3;
+
+let text4 = "     Hello World!     ";
+let text5 = text4.trim();
+document.getElementById("demo9").innerHTML ="Length text4 = " + text4.length + "<br>Length text5 = " + text5.length;
+
+let get = "5";
+document.getElementById("demo10").innerHTML = get.padStart(3,"x");
+
+document.getElementById("demo11").innerHTML = get.padEnd(2,"x");
+
+document.getElementById("demo12").innerHTML = text.charAt(2);
+
+document.getElementById("demo13").innerHTML = text.charCodeAt(1);
+
+let get1 = "a,b,c,d,e,f";
+const myArray = get1.split(",");
+document.getElementById("demo14").innerHTML = myArray[1];
+}
+
+    </script>
+</body>
+</html>

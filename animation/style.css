@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: aqua;
+}
+div{
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    margin:4px;
+    animation: expand 1.5s linear 1s infinite;
+    
+
+}
+div:hover{
+    animation-play-state: paused;
+    transform: rotateY(45deg);
+}
+@keyframes expand{
+    0%{
+        width: 200px;
+        height: 300px;
+        background-color: brown;
+    }
+    50%{
+        width: 600px;
+    }
+    100%{
+        width:200px;
+    }
+}

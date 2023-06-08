@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="section3" class="col-sm-12 text-left"> 
+        <center><h1>WELCOME TO GRAND SUPER MARKET </h1></center>             
+                <form name="frm">
+                    <div class="row itemhead">
+                        <label for="itemname">Name</label>
+                        <label for="itemname">Quantity</label>
+                        <label for="itemname">Rate</label> 
+                        <label for="itemcatg">Category</label>
+                        <label for="additem">Add Item</label>
+                    </div>
+                    <div class="row itemhead">
+                        <input type="text" id="itmname" name="itmname" placeholder="Item Name">
+                        <input type="text" id="itmqty" name="itmqty" placeholder="Item Quantity">
+                        <input type="text" id="itmrate" name="itmrate" placeholder="Item Rate">
+                      
+                        <select id="itmcatg" name="itmcatg">
+                            <option value="NA" selected>Select Category</option>
+                            <option value="frt">Fruits</option>
+                            <option value="veg">Vegitables</option>
+                            <option value="stn">Stationary</option>
+                          </select> 
+                          <input type="button" value="+" onclick="addItems()">
+                    </div> 
+                </form>
+        <div>
+             <div>
+             <table class="table" id="myTable" width="50%" border="1">
+            <tr>
+            <th>NAME</th>
+            <th>CATG</th>
+            <th>QTY</th>
+            <th>RATE</th>
+            <th>PRICE</th>
+            </tr>   
+            </table>
+            </div>  
+         </div>  
+      </div>
+    
+    
+     
+    
+    </div>
+    </div>
+    <script>
+    var itemData = {
+        name: "NA",
+        qty: 0,
+        rate: 0,
+        catg:"NA",
+        price: function () { 
+                               return this.qty * this.rate;
+                  }
+      };
+      
+      function addItems()
+      {
+         
+          itemData.name = document.getElementById("itmname").value;
+          itemData.qty = document.getElementById("itmqty").value;
+          itemData.rate = document.getElementById("itmrate").value;   
+          itemData.catg =document.getElementById("itmcatg").item(document.getElementById("itmcatg").selectedIndex).value;
+         
+        var table = document.getElementById("myTable"); 
+        var rowCount = table.rows.length;
+        //var row = table.insertRow(rowCount);
+      
+        //stripped design in rows dynamically
+        var row = table.insertRow(1);
+        if((rowCount%2)==0)
+        {
+          row.classList.add("tblstyle1");    
+        }
+        else
+          {
+              row.classList.add("tblstyle2");
+           }
+        
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+      
+        //  alert( Object.values(itemData));
+         
+        cell1.innerHTML = itemData.name;
+        cell2.innerHTML = itemData.catg;
+        cell3.innerHTML = itemData.qty;
+        cell4.innerHTML = itemData.rate;
+        cell5.innerHTML = itemData.price();
+       
+         clearData();
+      
+      }
+      function clearData(){
+          document.getElementById("itmname").focus();
+          
+           document.getElementById("itmname").value="";
+           document.getElementById("itmqty").value=0;
+           document.getElementById("itmrate").value=0;   
+           document.getElementById("itmcatg").selectedIndex =0;
+        
+      }
+      
+      
+      </script>
+      
+</body>
+</html>

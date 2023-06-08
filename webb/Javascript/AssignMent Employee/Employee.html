@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 5px;
+            
+        }
+        .name{
+            border: 2px solid black;            
+            text-align: center;
+            background-color: #38b8cf;
+        }
+        .head{
+            border: 2px solid black;
+            border-width: 50%;
+            background-image: linear-gradient(to right, #aa076b,#61045f);
+        }
+        .result{
+            display: flex;
+            align-items: flex-end;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+            width: 80%;
+            padding:10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="name">
+    <h2>ABC Company</h2>
+    </div>
+
+    <div class="head">
+        <form>
+            
+              <div class="row mb-4 ">
+                <label for=" Employee Code" class="col-sm-1 col-form-label"> Employee Code</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="code" placeholder=" Employee Code">
+                </div>
+              </div>
+              <div class="row mb-4 ">
+                <label for="Name" class="col-sm-1 col-form-label">Employee Name</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="name" placeholder="Employee Name">
+                </div>
+              </div>
+              <div class="row mb-4 ">
+                <label for="Designation" class="col-sm-1 col-form-label">Designation</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="desi" placeholder="Designation">
+                </div>
+              </div>
+              <div class="row mb-4 ">
+                <label for="Department" class="col-sm-1 col-form-label">Department</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="dpt" placeholder="Department">
+                </div>
+              </div>
+              <div class="row mb-4 ">
+                <label for="Basic Salary" class="col-sm-1 col-form-label">Basic Salary</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="salary" placeholder="Basic Salary" onchange="getSalary()">
+                </div>
+              </div>                            
+        </form>
+    <div class="result">
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+</div>
+    </div>
+    <!-- <div>
+        <button type="button" class="btn btn-primary" id="btnSalary" onclick="getSalary()">Salary</button> -->
+    </div>
+    
+    <!-- <form class="row g-3">
+        <div class="col-md-4">
+            <label for="" class="form-label">TA</label>
+            <input type="number" class="form-control" id="ta" disabled>
+          </div>
+          <div class="col-md-4">
+            <label for="" class="form-label">DA</label>
+            <input type="number" class="form-control" id="da" disabled>
+          </div>
+          <div class="col-md-4">
+            <label for="" class="form-label">HRA</label>
+            <input type="number" class="form-control" id="hra"disabled>
+          </div>
+          <div class="col-md-4">
+            <label for="" class="form-label">TAX</label>
+            <input type="number" class="form-control" id="tax"disabled>
+          </div>
+          <div class="col-md-4">
+            <label for="inputPassword4" class="form-label">Net Salary</label>
+            <input type="" class="form-control" id="netsalary" disabled>
+          </div>
+    </form> -->
+    
+
+
+
+<!-- <p id="demo"></p> -->
+
+<script>
+    
+    var person = {
+      EmployeeCode: "NA",
+      EmployeeName: "NA",
+      Designation:"Na",
+      Department:"Na",
+      BasicSalary: 0,
+      
+    };
+    
+
+
+    function getSalary(){
+        person.EmployeeCode = document.getElementById("code").value;
+        person.EmployeeName = document.getElementById("name").value;
+        person.Designation = document.getElementById("desi").value;
+        person.Department = document.getElementById("dpt").value;
+        person.BasicSalary = parseInt(document.getElementById("salary").value);
+
+        
+        
+        var ta =    person.BasicSalary*10/100;
+        document.getElementById("demo").innerHTML = "TA of " +person.EmployeeName+" is " + ta;
+
+        
+        
+        var da =    person.BasicSalary * (15/100);
+        document.getElementById("demo1").innerHTML = "DA of " +person.EmployeeName+" is " + da;
+
+        var hra =  person.BasicSalary * 25/100;
+        document.getElementById("demo2").innerHTML = "HRA of " +person.EmployeeName+" is " + hra;
+
+        var total = parseInt(person.BasicSalary + ta + da + hra);
+        document.getElementById("demo3").innerHTML = "Gross Salary of " +person.EmployeeName+" is " + total;
+
+        
+        var tax = person.BasicSalary * 12/100;
+        document.getElementById("demo4").innerHTML = "Tax of " +person.EmployeeName+" is " + tax;
+
+        var netsalary = parseInt(total - tax);
+        document.getElementById("demo5").innerHTML = "Net Salary of " +person.EmployeeName+" is " + netsalary;
+
+        
+
+    }
+    
+
+    </script>
+</body>
+</html>
+</body>
+</html>
